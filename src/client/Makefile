@@ -11,6 +11,7 @@ OBJ = $(patsubst %.c, %.o, $(SRC))
 	$(CC) -o $@ -c $< $(CFLAGS)
 
 client: $(OBJ)
+	@mkdir -p $(BIN_DIR)
 	$(CC) -o $(BIN_DIR)/$@ $^ $(CFLAGS)
 
 run_client: client
