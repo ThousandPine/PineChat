@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
-cd $1
+if [ $# -eq 0 ]; then
+    make run_server
+else
+    cd $1
+fi
+
 ./server 30080
