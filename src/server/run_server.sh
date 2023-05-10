@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-gcc -pthread server.c -o server
+cd $1
 ./server 30080

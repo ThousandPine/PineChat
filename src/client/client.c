@@ -48,7 +48,6 @@ int main(int argc, char *argv[])
     {
         scanf("%s", buf);
         printf("client send::%s\n", buf);
-        /* 添加换行符，防止服务器无法立刻响应消息 */
         len = strlen(buf);
         // buf[len++] = '\n';
         size = sendto(sockfd, buf, len, 0, (struct sockaddr *)&server_addr, sizeof server_addr);
